@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="tabPane" prefHeight="860.0" prefWidth="800.0" style="-fx-background-radius: 20;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ReportsController">
+    <tabs>
+
+        <Tab fx:id="tabApptStatistics" text="Appointments Types By Month">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TableView fx:id="tblApptStatistics" prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="colApptMonth" prefWidth="96.0" text="Month" />
+                                <TableColumn fx:id="colApptType" prefWidth="83.0" text="Types" />
+                                <TableColumn fx:id="colApptAmount" prefWidth="136.0" text="Amount Per Type" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tabSchedule" text="Schedule">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                  <Label layoutX="88.0" layoutY="6.0" text="Contact: " />
+                        <ComboBox fx:id="cbxContact" onAction="#onChangeCustomerComboBox" layoutX="153.0" layoutY="2.0" prefWidth="150.0" promptText="Select Customer" />
+                        <TableView fx:id="tblSchedule" layoutX="178.0" layoutY="29.0" prefHeight="802.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="29.0">
+                            <columns>
+                                <TableColumn fx:id="colScheduleID" minWidth="20.0" prefWidth="100" text="Appointment ID" />
+                                <TableColumn fx:id="colScheduleTitle" minWidth="20.0" prefWidth="140.0" text="Title" />
+                                <TableColumn fx:id="colScheduleType" minWidth="20.0" prefWidth="95.0" text="Type" />
+                                <TableColumn fx:id="colScheduleDescription" minWidth="20.0" prefWidth="120.0" text="Description" />
+                                <TableColumn fx:id="colScheduleStart" minWidth="20.0" prefWidth="115.0" text="Start Date and time" />
+                                <TableColumn fx:id="colScheduleEnd" minWidth="20.0" prefWidth="115.0" text="End Date and time" />
+                                <TableColumn fx:id="colScheduleCustomerID" minWidth="20.0" prefWidth="90.0" text="Customer ID" />
+<!--                                <TableColumn fx:id="colScheduleLocation" minWidth="20.0" prefWidth="95.0" text="Location" />-->
+<!--                                <TableColumn fx:id="colScheduleContactName" minWidth="20.0" prefWidth="90.0" text="Contact Name" />-->
+<!--                                <TableColumn fx:id="colScheduleContactEmail" minWidth="20.0" prefWidth="90.0" text="Contact Email" />-->
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tabCustomerByLocation" text="Customers By Location">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <BarChart fx:id="barChartCustomer" layoutX="44.0" layoutY="-29.0" legendVisible="false" prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <xAxis>
+                                <CategoryAxis label="Cities" side="BOTTOM" fx:id="xAxis" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="yAxis" label="Customers" minorTickLength="0" side="LEFT" tickLabelRotation="-93.5" tickUnit="1" />
+                            </yAxis>
+                        </BarChart>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

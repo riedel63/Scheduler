@@ -1,0 +1,16 @@
+string
+string
+string
+string
+string
+string
+Aug 04, 2022 1:22:05 PM Controllers.LoginController handleLogin
+INFO: Login Failed
+string
+Aug 04, 2022 1:22:50 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 17 by JavaFX runtime of version 11.0.2
+Aug 04, 2022 1:22:52 PM Controllers.LoginController handleLogin
+INFO: Login Success, User ID: 2
+string
+Aug 04, 2022 1:45:11 PM Controllers.LoginController handleLogin
+INFO: Login Failed
