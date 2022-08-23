@@ -1,0 +1,218 @@
+@startuml
+abstract class Utilities.Connection.DBConnection
+class Controllers.AddAppointmentScreenController
+class Controllers.AddCustomerScreenController
+class Controllers.AddUserScreenController
+class Controllers.AppointmentScreenController
+class Controllers.CustomerScreenController
+class Controllers.DashboardController
+class Controllers.LoginController
+class Controllers.ReportsController
+class Controllers.UsersScreenController
+class Model.Address
+class Model.Appointment
+class Model.AppointmentReport
+class Model.Contacts
+class Model.Country
+class Model.Customer
+class Model.Divisions
+class Model.Main
+class Model.User
+class Utilities.Connection.LoggerUtil
+class java.io.FileWriter
+class java.io.IOException
+class java.io.PrintWriter
+class java.net.URL
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.PreparedStatement
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.text.SimpleDateFormat
+class java.time.DayOfWeek
+class java.time.LocalDate
+class java.time.LocalDateTime
+class java.time.ZoneId
+class java.time.ZonedDateTime
+class java.time.format.DateTimeFormatter
+class java.util.Locale
+class java.util.ResourceBundle
+class java.util.logging.FileHandler
+class java.util.logging.Level
+class java.util.logging.Logger
+class java.util.logging.SimpleFormatter
+class javafx.application.Application
+class javafx.application.Platform
+class javafx.collections.FXCollections
+class javafx.collections.ObservableList
+class javafx.event.ActionEvent
+class javafx.fxml.FXMLLoader
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.chart.BarChart
+class javafx.scene.chart.XYChart
+class javafx.scene.chart.XYChart.Data
+class javafx.scene.control.Alert
+class javafx.scene.control.ButtonType
+class javafx.scene.control.ComboBox
+class javafx.scene.control.Label
+class javafx.scene.control.PasswordField
+class javafx.scene.control.TabPane
+class javafx.scene.control.TableColumn
+class javafx.scene.control.TableView
+class javafx.scene.control.TextField
+class javafx.scene.control.cell.PropertyValueFactory
+class javafx.scene.layout.AnchorPane
+class javafx.stage.Stage
+Utilities.Connection.DBConnection ..> java.sql.Connection
+Utilities.Connection.DBConnection ..> java.sql.DriverManager
+Utilities.Connection.DBConnection ..> java.sql.PreparedStatement
+Controllers.AddAppointmentScreenController ..> Utilities.Connection.DBConnection
+Controllers.AddAppointmentScreenController ..> java.net.URL
+Controllers.AddAppointmentScreenController ..> java.sql.PreparedStatement
+Controllers.AddAppointmentScreenController ..> java.sql.ResultSet
+Controllers.AddAppointmentScreenController ..> java.sql.SQLException
+Controllers.AddAppointmentScreenController ..> java.time.DayOfWeek
+Controllers.AddAppointmentScreenController ..> java.time.LocalDate
+Controllers.AddAppointmentScreenController ..> java.time.LocalDateTime
+Controllers.AddAppointmentScreenController ..> java.util.ResourceBundle
+Controllers.AddAppointmentScreenController ..> javafx.collections.FXCollections
+Controllers.AddAppointmentScreenController ..> javafx.collections.ObservableList
+Controllers.AddAppointmentScreenController ..> javafx.scene.control.cell.PropertyValueFactory
+Controllers.AddCustomerScreenController ..> Utilities.Connection.DBConnection
+Controllers.AddCustomerScreenController ..> java.net.URL
+Controllers.AddCustomerScreenController ..> java.sql.PreparedStatement
+Controllers.AddCustomerScreenController ..> java.sql.ResultSet
+Controllers.AddCustomerScreenController ..> java.sql.SQLException
+Controllers.AddCustomerScreenController ..> java.util.ResourceBundle
+Controllers.AddCustomerScreenController ..> javafx.collections.FXCollections
+Controllers.AddCustomerScreenController ..> javafx.collections.ObservableList
+Controllers.AddCustomerScreenController ..> javafx.event.ActionEvent
+Controllers.AddUserScreenController ..> Utilities.Connection.DBConnection
+Controllers.AddUserScreenController ..> Model.Main
+Controllers.AddUserScreenController ..> Model.User
+Controllers.AddUserScreenController ..> java.sql.PreparedStatement
+Controllers.AddUserScreenController ..> java.sql.SQLException
+Controllers.AddUserScreenController ..> javafx.event.ActionEvent
+Controllers.AppointmentScreenController ..> Utilities.Connection.DBConnection
+Controllers.AppointmentScreenController ..> Model.Appointment
+Controllers.AppointmentScreenController ..> Model.Contacts
+Controllers.AppointmentScreenController ..> Model.Main
+Controllers.AppointmentScreenController ..> java.io.IOException
+Controllers.AppointmentScreenController ..> java.net.URL
+Controllers.AppointmentScreenController ..> java.text.SimpleDateFormat
+Controllers.AppointmentScreenController ..> java.time.LocalDateTime
+Controllers.AppointmentScreenController ..> java.util.ResourceBundle
+Controllers.AppointmentScreenController ..> java.util.logging.Level
+Controllers.AppointmentScreenController ..> java.util.logging.Logger
+Controllers.AppointmentScreenController ..> javafx.collections.FXCollections
+Controllers.AppointmentScreenController ..> javafx.collections.ObservableList
+Controllers.AppointmentScreenController ..> javafx.event.ActionEvent
+Controllers.AppointmentScreenController ..> javafx.fxml.FXMLLoader
+Controllers.AppointmentScreenController ..> javafx.scene.control.cell.PropertyValueFactory
+Controllers.AppointmentScreenController ..> javafx.scene.layout.AnchorPane
+Controllers.CustomerScreenController ..> Utilities.Connection.DBConnection
+Controllers.CustomerScreenController ..> java.io.IOException
+Controllers.CustomerScreenController ..> java.net.URL
+Controllers.CustomerScreenController ..> java.util.ResourceBundle
+Controllers.CustomerScreenController ..> java.util.logging.Level
+Controllers.CustomerScreenController ..> java.util.logging.Logger
+Controllers.CustomerScreenController ..> javafx.collections.FXCollections
+Controllers.CustomerScreenController ..> javafx.collections.ObservableList
+Controllers.CustomerScreenController ..> javafx.event.ActionEvent
+Controllers.CustomerScreenController ..> javafx.fxml.FXMLLoader
+Controllers.CustomerScreenController ..> javafx.scene.control.cell.PropertyValueFactory
+Controllers.CustomerScreenController ..> javafx.scene.layout.AnchorPane
+Controllers.DashboardController ..> java.io.IOException
+Controllers.DashboardController ..> java.net.URL
+Controllers.DashboardController ..> java.util.ResourceBundle
+Controllers.DashboardController ..> javafx.application.Platform
+Controllers.DashboardController ..> javafx.event.ActionEvent
+Controllers.DashboardController ..> javafx.fxml.FXMLLoader
+Controllers.DashboardController ..> javafx.scene.control.Alert
+Controllers.DashboardController ..> javafx.scene.control.ButtonType
+Controllers.DashboardController ..> javafx.scene.control.TabPane
+Controllers.DashboardController ..> javafx.scene.layout.AnchorPane
+Controllers.LoginController ..> Utilities.Connection.DBConnection
+Controllers.LoginController ..> Model.Main
+Controllers.LoginController ..> Model.User
+Controllers.LoginController ..> Utilities.Connection.LoggerUtil
+Controllers.LoginController ..> java.io.FileWriter
+Controllers.LoginController ..> java.io.PrintWriter
+Controllers.LoginController ..> java.net.URL
+Controllers.LoginController ..> java.time.ZoneId
+Controllers.LoginController ..> java.util.Locale
+Controllers.LoginController ..> java.util.ResourceBundle
+Controllers.LoginController ..> java.util.logging.Logger
+Controllers.LoginController ..> javafx.application.Platform
+Controllers.LoginController ..> javafx.event.ActionEvent
+Controllers.LoginController ..> javafx.fxml.FXMLLoader
+Controllers.LoginController ..> javafx.scene.Parent
+Controllers.LoginController ..> javafx.scene.Scene
+Controllers.LoginController ..> javafx.scene.control.Alert
+Controllers.LoginController ..> javafx.scene.control.ButtonType
+Controllers.LoginController ..> javafx.scene.control.Label
+Controllers.LoginController ..> javafx.scene.control.PasswordField
+Controllers.LoginController ..> javafx.scene.control.TextField
+Controllers.ReportsController ..> Utilities.Connection.DBConnection
+Controllers.ReportsController ..> java.net.URL
+Controllers.ReportsController ..> java.time.LocalDateTime
+Controllers.ReportsController ..> java.util.ResourceBundle
+Controllers.ReportsController ..> java.util.logging.Level
+Controllers.ReportsController ..> java.util.logging.Logger
+Controllers.ReportsController ..> javafx.collections.FXCollections
+Controllers.ReportsController ..> javafx.collections.ObservableList
+Controllers.ReportsController ..> javafx.event.ActionEvent
+Controllers.ReportsController ..> javafx.scene.chart.BarChart
+Controllers.ReportsController ..> javafx.scene.chart.XYChart
+Controllers.ReportsController ..> javafx.scene.chart.XYChart.Data
+Controllers.ReportsController ..> javafx.scene.control.ComboBox
+Controllers.ReportsController ..> javafx.scene.control.TabPane
+Controllers.ReportsController ..> javafx.scene.control.TableColumn
+Controllers.ReportsController ..> javafx.scene.control.TableView
+Controllers.ReportsController ..> javafx.scene.control.cell.PropertyValueFactory
+Controllers.UsersScreenController ..> Utilities.Connection.DBConnection
+Controllers.UsersScreenController ..> Model.User
+Controllers.UsersScreenController ..> java.io.IOException
+Controllers.UsersScreenController ..> java.net.URL
+Controllers.UsersScreenController ..> java.sql.Connection
+Controllers.UsersScreenController ..> java.sql.ResultSet
+Controllers.UsersScreenController ..> java.sql.SQLException
+Controllers.UsersScreenController ..> java.util.ResourceBundle
+Controllers.UsersScreenController ..> java.util.logging.Level
+Controllers.UsersScreenController ..> java.util.logging.Logger
+Controllers.UsersScreenController ..> javafx.collections.FXCollections
+Controllers.UsersScreenController ..> javafx.collections.ObservableList
+Controllers.UsersScreenController ..> javafx.event.ActionEvent
+Controllers.UsersScreenController ..> javafx.fxml.FXMLLoader
+Controllers.UsersScreenController ..> javafx.scene.control.TableColumn
+Controllers.UsersScreenController ..> javafx.scene.control.TableView
+Controllers.UsersScreenController ..> javafx.scene.control.cell.PropertyValueFactory
+Controllers.UsersScreenController ..> javafx.scene.layout.AnchorPane
+Model.Appointment ..> java.time.LocalDateTime
+Model.Customer ..> javafx.collections.FXCollections
+Model.Customer ..> javafx.collections.ObservableList
+Model.Main ..> Utilities.Connection.DBConnection
+Model.Main ..> Utilities.Connection.LoggerUtil
+Model.Main ..> java.text.SimpleDateFormat
+Model.Main ..> java.time.LocalDateTime
+Model.Main ..> java.time.ZoneId
+Model.Main ..> java.time.ZonedDateTime
+Model.Main ..> java.time.format.DateTimeFormatter
+Model.Main ..> java.util.Locale
+Model.Main ..> java.util.ResourceBundle
+Model.Main ..> javafx.collections.FXCollections
+Model.Main ..> javafx.collections.ObservableList
+Model.Main ..> javafx.fxml.FXMLLoader
+Model.Main ..> javafx.scene.Parent
+Model.Main ..> javafx.scene.Scene
+Model.Main ..> javafx.scene.control.Alert
+Model.Main ..> javafx.stage.Stage
+Utilities.Connection.LoggerUtil ..> java.io.FileWriter
+Utilities.Connection.LoggerUtil ..> java.io.IOException
+Utilities.Connection.LoggerUtil ..> java.io.PrintWriter
+Utilities.Connection.LoggerUtil ..> java.util.logging.FileHandler
+Utilities.Connection.LoggerUtil ..> java.util.logging.Level
+Utilities.Connection.LoggerUtil ..> java.util.logging.Logger
+Utilities.Connection.LoggerUtil ..> java.util.logging.SimpleFormatter
+@enduml
